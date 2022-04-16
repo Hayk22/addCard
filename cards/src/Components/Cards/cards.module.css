@@ -1,0 +1,25 @@
+.cards {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 25px;
+  justify-content: center;
+  padding-top: 150px;
+  position: relative;
+  max-height: 69vh;
+  max-width: 100vw;
+  overflow: auto;
+}
+.card {
+  width: 250px;
+  height: 150px;
+  border: 1px solid black;
+}
+.cardNumber {
+  text-align: center;
+  padding-top: 25px;
+  font-size: 30px;
+}
+.cardCancel {
+  display: grid;
+  justify-items: right;
+}
