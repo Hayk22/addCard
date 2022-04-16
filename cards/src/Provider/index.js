@@ -15,7 +15,7 @@ const DivsProvider = ({ children }) => {
     setNumber([...number]);
   };
 
-  const divDelete = (specialIndex) => {
+  const deleteNumber = (specialIndex) => {
     setNumber(number.filter((_, index) => specialIndex !== index));
   };
 
@@ -25,7 +25,7 @@ const DivsProvider = ({ children }) => {
         number,
         addNumber: add,
         sortNumbers: sort,
-        deleteNumber: divDelete,
+        deleteNumber: deleteNumber,
       }}
     >
       {children}

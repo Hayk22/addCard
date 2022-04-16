@@ -4,6 +4,7 @@ import HeaderCss from "./header.module.css";
 
 function Header() {
   const { addNumber, sortNumbers } = useContext(DivsContext);
+
   return (
     <header className={HeaderCss.header}>
       <nav>
