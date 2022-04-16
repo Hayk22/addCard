@@ -1,25 +1,23 @@
-import React, { useState } from "react";
-import { createContext } from "react";
+import React, { useState, createContext } from "react";
 
 export const NumberContext = createContext();
 
 const NumberProvider = ({ children }) => {
-  const [number, setNumber] = useState([]);
-  const [color, setColor] = useState([]);
+  const [number, setNumber] = useState([4, 4, 5]);
 
-  function Add() {
+  const Add = () => {
     number.push(Math.floor(Math.random() * 100));
     setNumber([...number]);
-  }
+  };
 
-  function Sort() {
+  const Sort = () => {
     number.sort((a, b) => a - b);
     setNumber([...number]);
-  }
+  };
 
-  function Delete(canceledNumber) {
-    setNumber(number.filter((item) => item !== canceledNumber));
-  }
+  const Delete = (specialIndex) => {
+    setNumber(number.filter((_, index) => specialIndex !== index));
+  };
 
   return (
     <NumberContext.Provider

@@ -3,7 +3,7 @@ import CardCss from "./cards.module.css";
 import { NumberContext } from "../../Provider";
 
 function Cards() {
-  const { number, deleteNumber, addColor } = useContext(NumberContext);
+  const { number, deleteNumber } = useContext(NumberContext);
 
   return (
     <div className={CardCss.cards}>
@@ -12,7 +12,7 @@ function Cards() {
           <button
             className={CardCss.cardCancel}
             onClick={() => {
-              deleteNumber(item);
+              deleteNumber(index);
             }}
           >
             X
