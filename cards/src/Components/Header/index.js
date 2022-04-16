@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { NumberContext } from "../../Provider";
+import { DivsContext } from "../../Provider";
 import HeaderCss from "./header.module.css";
 
 function Header() {
-  const { addNumber, sortNumbers } = useContext(NumberContext);
+  const { addNumber, sortNumbers } = useContext(DivsContext);
   return (
     <header className={HeaderCss.header}>
       <nav>

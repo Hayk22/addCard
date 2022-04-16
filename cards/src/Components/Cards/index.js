@@ -1,9 +1,9 @@
 import { useContext } from "react";
+import { DivsContext } from "../../Provider";
 import CardCss from "./cards.module.css";
-import { NumberContext } from "../../Provider";
 
 function Cards() {
-  const { number, deleteNumber } = useContext(NumberContext);
+  const { number, deleteNumber } = useContext(DivsContext);
 
   return (
     <div className={CardCss.cards}>

@@ -14,7 +14,7 @@ function App() {
           <Description />
         </section>
         <Footer />
-      </div>s
+      </div>
     </NumberProvider>
   );
 }

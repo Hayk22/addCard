@@ -1,36 +1,36 @@
 import React, { useState, createContext } from "react";
 
-export const NumberContext = createContext();
+export const DivsContext = createContext();
 
-const NumberProvider = ({ children }) => {
+const DivsProvider = ({ children }) => {
   const [number, setNumber] = useState([4, 4, 5]);
 
-  const Add = () => {
+  const add = () => {
     number.push(Math.floor(Math.random() * 100));
     setNumber([...number]);
   };
 
-  const Sort = () => {
+  const sort = () => {
     number.sort((a, b) => a - b);
     setNumber([...number]);
   };
 
-  const Delete = (specialIndex) => {
+  const divDelete = (specialIndex) => {
     setNumber(number.filter((_, index) => specialIndex !== index));
   };
 
   return (
-    <NumberContext.Provider
+    <DivsContext.Provider
       value={{
         number,
-        addNumber: Add,
-        sortNumbers: Sort,
-        deleteNumber: Delete,
+        addNumber: add,
+        sortNumbers: sort,
+        deleteNumber: divDelete,
       }}
     >
       {children}
-    </NumberContext.Provider>
+    </DivsContext.Provider>
   );
 };
 
-export default NumberProvider;
+export default DivsProvider;
