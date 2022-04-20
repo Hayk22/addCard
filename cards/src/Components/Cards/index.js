@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { DivsContext } from "../../Provider";
 import CardCss from "./cards.module.css";
 
@@ -12,12 +12,12 @@ function Cards() {
           <button
             className={CardCss.cardCancel}
             onClick={() => {
-              deleteNumber(index);
+              deleteNumber(item.id);
             }}
           >
             X
           </button>
-          <div className={CardCss.cardNumber}>{item}</div>
+          <div className={CardCss.cardNumber}>{item.random[0]}</div>
         </div>
       ))}
     </div>
